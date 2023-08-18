@@ -1,5 +1,14 @@
 const express = require("express")
 const app = express()
+const mongoose = require("mongoose") // Importamos mongoose
+const pass = require("./pass") // Importamos la contraseña
+
+const connectionString = "mongodb+srv://Administrador1:${pass}@mongodb101.dhsltvg.mongodb.net/?retryWrites=true&w=majority"
+
+
+
+
+app.use(cors())
 
 app.use(express.json())
 
